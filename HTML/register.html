@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Înregistrare</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/register_style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>Înregistrează-te</h1>
+        <form
+          class="register-form"
+          action="#"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="row">
+            <label for="username">Nume utilizator</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="ex: maria92"
+              required
+            />
+          </div>
+
+          <div class="row">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ex: nume@exemplu.com"
+              required
+            />
+          </div>
+
+          <div class="row two-col">
+            <div>
+              <label for="password">Parolă</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div>
+              <label for="confirm_password">Confirmă parola</label>
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <label>Gen</label>
+            <div class="radio-group-vertical">
+              <label
+                ><span>Femeie</span>
+                <input type="radio" name="gender" value="femeie"
+              /></label>
+              <label
+                ><span>Bărbat</span>
+                <input type="radio" name="gender" value="barbat"
+              /></label>
+              <label
+                ><span>Altul</span>
+                <input type="radio" name="gender" value="altul"
+              /></label>
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="account_type">Tip cont</label>
+            <select id="account_type" name="account_type" required>
+              <option value="" disabled selected>Selectează</option>
+              <option value="student">Student</option>
+              <option value="profesor">Profesor</option>
+              <option value="altul">Altul</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <label>Interese</label>
+            <div class="checkbox-grid">
+              <label
+                ><input
+                  type="checkbox"
+                  name="interests"
+                  value="frontend"
+                /><span>Frontend</span></label
+              >
+              <label
+                ><input type="checkbox" name="interests" value="backend" /><span
+                  >Backend</span
+                ></label
+              >
+              <label
+                ><input type="checkbox" name="interests" value="uxui" /><span
+                  >UX/UI</span
+                ></label
+              >
+              <label
+                ><input type="checkbox" name="interests" value="js" /><span
+                  >JavaScript</span
+                ></label
+              >
+              <label
+                ><input type="checkbox" name="interests" value="python" /><span
+                  >Python Web</span
+                ></label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="interests"
+                  value="wordpress"
+                /><span>WordPress</span></label
+              >
+              <label
+                ><input type="checkbox" name="interests" value="django" /><span
+                  >Django</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="avatar">Încarcă avatar</label>
+            <input type="file" id="avatar" name="avatar" accept="image/*" />
+          </div>
+
+          <div class="row">
+            <label for="bio">Scurtă descriere</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="3"
+              placeholder="Scrie câteva cuvinte despre tine..."
+            ></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Creează cont</button>
+            <button type="reset" class="btn ghost">Resetează</button>
+          </div>
+
+          <p class="login-link">
+            Ai deja cont? <a href="login.html">Mergi la login</a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
