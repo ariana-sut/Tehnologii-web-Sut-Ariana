@@ -2,7 +2,7 @@ let loginForm = document.getElementById("loginForm");
 let emailInput = document.getElementById("email");
 let passwordInput = document.getElementById("password");
 
-loginForm.addEventListener("submit", function(e) {
+loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const email = emailInput.value.trim();
@@ -20,5 +20,5 @@ loginForm.addEventListener("submit", function(e) {
   }
 
   alert("Login reușit!");
-  window.location.href = "home.html";
+  window.location.href = "loading.html";
 });
