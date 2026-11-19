@@ -1,21 +1,22 @@
+{% load static %}
 <!doctype html>
 <html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acasă - Comunitatea TW</title>
-    <link rel="stylesheet" href="../CSS/home_style.css" />
-    <link rel="stylesheet" href="../CSS/cursor.css" />
+    <link rel="stylesheet" href="{% static 'CSS/home_style.css' %}" />
+    <link rel="stylesheet" href="{% static 'CSS/cursor.css' %}" />
   </head>
   <body>
     <header>
       <div class="container">
         <h1>Comunitatea de Tehnologii Web 2025</h1>
         <nav>
-          <a href="home.html">Acasă</a>
-          <a href="universities.html">Universități</a>
-          <a href="chatbot.html">ChatBot</a>
-          <a href="login.html">Logout</a>
+          <a href="{% url 'home' %}">Acasă</a>
+          <a href="{% url 'universities' %}">Universități</a>
+          <a href="{% url 'chatbot' %}">ChatBot</a>
+          <a href="{% url 'login' %}">Logout</a>
         </nav>
       </div>
     </header>
@@ -28,7 +29,7 @@
             Aici vei găsi informații detaliate despre facultățile care oferă
             programe relevante pentru TW.
           </p>
-          <a href="universities.html" class="btn">Vezi mai mult</a>
+          <a href="{% url 'universities' %}" class="btn">Vezi mai mult</a>
         </div>
 
         <div class="column">
@@ -46,14 +47,14 @@
             Interacționează cu ChatBot-ul nostru pentru a primi răspunsuri
             rapide.
           </p>
-          <a href="chatbot.html" class="btn">Vezi mai mult</a>
+          <a href="{% url 'chatbot' %}" class="btn">Vezi mai mult</a>
         </div>
 
         <div class="carousel-container">
           <div class="carousel-view">
             <img
               id="carousel-image"
-              src="../MEDIA/universitate.jpg"
+              src="{% static 'MEDIA/universitate.jpg' %}"
               alt="Universitate"
             />
           </div>
@@ -75,8 +76,8 @@
         </p>
       </div>
     </footer>
-    <script src="../JS/cursor.js"></script>
-    <script src="../JS/animatie.js"></script>
-    <script type="module" src="../JS/galerie.js"></script>
+    <script src="{% static 'JS/cursor.js' %}"></script>
+    <script src="{% static 'JS/animatie.js' %}"></script>
+    <script type="module" src="{% static 'JS/galerie.js' %}"></script>
   </body>
 </html>
