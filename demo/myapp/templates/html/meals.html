@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/meals_style.css' %}" />
+    <title>Meals Finder</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <!-- Add other menu links matching your urls.py if needed -->
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Meals Search</h1>
+      <!-- Search area -->
+      <form id="searchForm">
+        <input
+          id="queryInput"
+          type="text"
+          placeholder="Search meals (e.g., pasta)..."
+        />
+        <button id="searchBtn" type="submit">Search</button>
+      </form>
+      <!-- Status area -->
+      <p id="status" aria-live="polite"></p>
+      <!-- Results area -->
+      <div id="results"></div>
+    </main>
+    <footer>Meals API Lab</footer>
+    <script src="{% static 'JS/meals.js' %}"></script>
+  </body>
+</html>

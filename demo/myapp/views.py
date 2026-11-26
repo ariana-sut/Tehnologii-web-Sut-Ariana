@@ -27,3 +27,6 @@ def chatbot(request):
 
 def galerie(request):
   return render(request, "galerie.html")
+
+def meals_page(request):
+  return render(request, "./html/meals.html")
